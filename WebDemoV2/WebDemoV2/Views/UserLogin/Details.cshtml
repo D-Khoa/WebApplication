@@ -1,0 +1,67 @@
+﻿@model WebDemoV2.Models.m_user
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_HyroMenu.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>m_user</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Isactive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Isactive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTimeRST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTimeRST)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

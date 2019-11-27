@@ -139,6 +139,11 @@ namespace WebDemoV2.Controllers
             return View(objuser);
         }
 
+        public ActionResult SignIn()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult SignIn([Bind(Include = "Email,Password")] m_user objuser)
@@ -148,8 +153,8 @@ namespace WebDemoV2.Controllers
                 var obj = db.m_user.Where(a => a.Email.Equals(objuser.Email) && a.Password.Equals(objuser.Password)).FirstOrDefault();
                 if (obj != null)
                 {
-                    Session["ID"] = obj.ID.ToString();
-                    Session["UserName"] = obj.UserName.ToString();
+                    //Session["ID"] = obj.ID.ToString();
+                    //Session["UserName"] = obj.UserName.ToString();
                     return RedirectToAction("Index");
                 }
                 else
